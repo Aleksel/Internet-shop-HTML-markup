@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pet-Like Интернет магазин</title>
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<script src="/js/jquery-1.10.2.min.js"></script>
+<script>
+    var flag = true;
+    jQuery(function($){
+        var alternate = true;
+        $('#td1').click(function(){
+            $('#td2').css('border-bottom','1px solid grey');
+            $('#td1').css('border-bottom','none');
+            $('#div_desc').show();
+            $('#conteiner_opinion').hide();
+            $('#show_write').hide();
+            if ('скрыть форму для отзыва'===$('#show_write2').text()){
+                alternate = !alternate;
+            }
+            $('#write_response').hide();
+            $('#show_write2').text('написать отзыв');
+            $('#pencil').css('margin-left','560px');
+        });
+        $('#td2').click(function(){
+            $('#td1').css('border-bottom','1px solid grey');
+            $('#td2').css('border-bottom','none');
+            $('#conteiner_opinion').show();
+            $('#div_desc').hide();
+            $('#show_write').show();
+        });
+        flag = true;
+        $('#d1').mouseenter(function(){
+            if (true === flag){
+                $('#show_hint').text('Ужасно');
+                $('#imgStar').css('background','url(/pic/star/1.png) 0 0 no-repeat');
+            };
+        });
+        $('#d2').mouseenter(function(){
+            if (true === flag){
+                $('#show_hint').text('Плохо');
+                $('#imgStar').css('background','url(/pic/star/2.png) 0 0 no-repeat');
+            };
+        });
+        $('#d3').mouseenter(function(){
+            if (true === flag){
+                $('#show_hint').text('Обычно');
+                $('#imgStar').css('background','url(/pic/star/3.png) 0 0 no-repeat');
+            };
+        });
+        $('#d4').mouseenter(function(){
+            if (true === flag){
+                $('#show_hint').text('Хорошо');
+                $('#imgStar').css('background','url(/pic/star/4.png) 0 0 no-repeat');
+            };
+        });
+        $('#d5').mouseenter(function(){
+            if (true === flag){
+                $('#show_hint').text('Отлично');
+                $('#imgStar').css('background','url(/pic/star/5.png) 0 0 no-repeat');
+            };
+        });
+        $('#d1').click(function(){
+            flag = false;
+            $('#show_hint').text('Ужасно');
+            $('#imgStar').css('background','url(/pic/star/1.png) 0 0 no-repeat');
+        });
+        $('#d2').click(function(){
+            flag = false;
+            $('#show_hint').text('Плохо');
+            $('#imgStar').css('background','url(/pic/star/2.png) 0 0 no-repeat');
+        });
+        $('#d3').click(function(){
+            flag = false;
+            $('#show_hint').text('Обычно');
+            $('#imgStar').css('background','url(/pic/star/3.png) 0 0 no-repeat');
+        });
+        $('#d4').click(function(){
+            flag = false;
+            $('#show_hint').text('Хорошо');
+            $('#imgStar').css('background','url(/pic/star/4.png) 0 0 no-repeat');
+        });
+        $('#d5').click(function(){
+            flag = false;
+            $('#show_hint').text('Отлично');
+            $('#imgStar').css('background','url(/pic/star/5.png) 0 0 no-repeat');
+        });
+        $('#imgStar').mouseleave(function(){
+            if (true === flag){
+                $('#show_hint').text('');
+                $('#imgStar').css('background','url(/pic/star/0.png) 0 0 no-repeat');
+            };
+        });
+        $('#show_write2').click(function (){
+            if (alternate) {
+                $('#pencil').css('margin-left','490px');
+                $(this).text('скрыть форму для отзыва');
+                $('#write_response').show(200);
+                $('#line').show(200);
+            } else {
+                $('#pencil').css('margin-left','560px');
+                $(this).text('написать отзыв');
+                $('#write_response').hide(200);
+                $('#line').hide(200);
+            }
+        alternate = !alternate;
+        });
+    });
+</script>
+</head>
+<body>
+	<div id="main">
+		<div id="header">
+        	<div id="logo"><a href="/" title="На главную страницу"><span>Побалуйте вашего любимца</span></a></div>
+			<div id="entrance">
+            	<a id="enter" href="/">Вход для пользователей</a>
+                <a id="registration" href="/">Регистрация</a>
+            </div>
+          	<form action="#">
+           	<div id="search">
+            	<input type="text" size="30" id="shearchmain" name="shearch_main" onfocus="if('Поиск'===this.value) this.value='';" onblur="if(''===this.value) this.value='Поиск';" value="Поиск">
+            	<input type="submit" id="submit" value="">
+            </div>
+            </form>
+            <ul id="menuGor">
+            	<li><a href="#"><span>Главная</span></a></li>
+                <li><a href="#"><span>О магазине</span></a></li>
+                <li><a href="#"><span>Условия доставки</span></a></li>
+                <li><a href="#"><span>Акции</span></a></li>
+                <li><a href="#"><span>Связаться с нами</span></a></li>
+            </ul>
+            <div id="basket">
+            	<div id="iconBasket"></div>
+                <div id="textBasket">
+                	<div id="basketCount">Корзина: 0 товаров</div>
+                    <div id="goToBasket"><a href="/cart.html">Перейти в корзину</a></div>
+                </div>
+            </div>
+        </div>
+        <div id="contener3">
+      		<div id="news">
+              	<div id="menuVer">
+                   <ul id="menuVV">
+                       <li><a class="active" href="#"><span>Для собак</span></a></li>
+                       <ul>
+                                <li><a  class="active" href="#">Клетки и вольеры</a></li>
+                                <li><a href="#">Лежаки</a></li>
+                                <li><a href="#">Машинки для стрижки</a></li>
+                                <li><a href="#">Намордники</a></li>
+                                <li><a href="#">Ножницы для стрижки</a></li>
+                                <li><a href="#">Ножи и насадки к машинкам</a></li>
+                                <li><a href="#">Ошейники</a></li>
+                                <li><a href="#">Переноски и сумки</a></li>
+                                <li><a href="#">Поводки, рулетки, шлейки</a></li>
+                                <li><a href="#">Фурминатор</a></li>
+                                <li><a href="#">Корма, лакомства, витамины</a></li>
+                                <li><a href="#">Средства по уходу</a></li>
+                       </ul>
+                       <li><a href="#"><span>Для кошек</span></a></li>
+                       <li><a href="#"><span>Для птиц</span></a></li>
+                       <li><a href="#"><span>Для грызунов</span></a></li>
+                       <li><a href="#"><span>Для рыб и рептилий</span></a></li>
+                       <li><a href="#"><span>Игрушки для животных</span></a></li>
+                   </ul>
+                </div>
+             	<a href="/"><div id="newsTitle"><span>Новости:</span></div></a>
+                <h3>06.05.2013</h3>
+               	<div id="news1">
+                    <p>Lego Duplo Набор для девочек (Лего Дупло 4623)
+                        Ambi Toys Погремушка Близнецы (Амби тойс AT31013)
+                        Taf Toys Игрушка "Развивающий кубик" (Таф Тойс 10355)
+                        Taf Toys Мобиль «Сафари» механический (Таф Тойс 11315)
+                        Taf Toys Мобиль «Весеннее настроение» (Таф Тойс 11215)</p>
+                    <a href="/"><span>читать далее</span></a>
+                    <h3>06.05.2013</h3>
+                    <p>Lego Duplo Набор для девочек (Лего Дупло 4623)
+                        Ambi Toys Погремушка Близнецы (Амби тойс AT31013)
+                        Taf Toys Игрушка "Развивающий кубик" (Таф Тойс 10355)
+                        Taf Toys Мобиль «Сафари» механический (Таф Тойс 11315)
+                        Taf Toys Мобиль «Весеннее настроение» (Таф Тойс 11215)</p>
+                        <a href="/"><span>читать далее</span></a>
+                    <h3>06.05.2013</h3>
+                    <p>Lego Duplo Набор для девочек (Лего Дупло 4623)
+                        Ambi Toys Погремушка Близнецы (Амби тойс AT31013)
+                        Taf Toys Игрушка "Развивающий кубик" (Таф Тойс 10355)
+                        Taf Toys Мобиль «Сафари» механический (Таф Тойс 11315)
+                        Taf Toys Мобиль «Весеннее настроение» (Таф Тойс 11215)</p>
+                    <a href="/"><span>читать далее</span></a>
+                    <br/><br/><br/><br/><br/>
+                </div>
+          	    <div id="newsBottom">
+                    <a href="/"><h1>Pet-Like.ru: интернет-магазин товаров для животных</h1></a>
+                    	<p>Добро пожаловать в наш интернет-магазин игрушек, подарков и сувениров! Мы предлагаем широкий ассортимент: детские игрушки для мальчиков, детские игрушки для девочек, подарки для мужчин, подарки для женщин, сувениры по хорошим ценам. В нашем интернет-магазине можно купить игрушки для мальчиков, купить игрушки для девочек, купить подарок, купить сувениры. Покупая в нашем Интернет-магазине игрушки, подарки или сувениры, вы можете быть уверены в качестве - ведь мы работаем только с официальными дилерами, крупнейших мировых производителей.</p>
+  				</div> 
+			</div>
+            <div id="content">
+                <div id="itemImg">
+                    <img title="Хорошая клетка" src="/pic/item/cage.png" height="290" width="290">
+                </div>
+                <div class="itemTitle2">
+                    <div id="itemTitle">Металлическая клетка для содержания  и перевозки. SAVIC DOG RESIDENCE 107</div>
+                    <div id="itemCharacter">материал: хром; размер: 107 x 71 x 81 cm</div>
+                </div>
+                <div class="itemTitle2">
+                    <div id="item_prise">3520 руб.</div>
+                    <img title="21 оценка" src="/pic/star/4.png" height="20" width="90"><span>21</span>
+                    <div class="button" id="b1">
+                        <input type="button" value="добавить в корзину" />
+                    </div>
+                </div>
+                <div id="itemDesc">
+                    <table>
+                        <tr>
+                            <td id="td1">Описание</td>
+                            <td id="td2">Отзывы</td>
+                            <td id="td3">&nbsp;</td>
+                        </tr>
+                    </table>
+                    <div id="div_desc">
+                        <p style="text-align: justify;">ПОКАЗАНИЯ:</p>
+                        <p style="text-align: justify;">Взрослые кошки старше 1 года.</p>
+                        <p style="text-align: justify;">ПРОТИВОПОКАЗАНИЯ:</p>
+                        <p style="text-align: justify;">&nbsp;&nbsp;&nbsp; * Котята.<br>
+                        &nbsp;&nbsp;&nbsp; * Беременные и кормящие кошки. На протяжении беременности и лактации кошки должны переводиться на корм Science Plan&trade; Nature's Best&trade; Kitten.</p>
+                        <p style="text-align: justify;">ИНГРЕДИЕНТЫ:</p>
+                        <p style="text-align: justify;">Курица (курица минимум 32%, цыпленок и индейка &ndash; минимум 42%), мука из курицы и индейки, молотый рис, мука из кукурузного глютена, молотая кукуруза, животный жир, дигест, сухое цельное яйцо, сухая свекольная пульпа, калия хлорид, дегидрированная морковь, дегидрированный горох, карбонат кальция, DL-метионин, соль, дикальция фосфат, овсяные волокна, оксид железа, таурин, витамины и микроэлементы. Содержит натуральные консерванты: смесь токоферолов, лимонную кислоту и экстракт розмарина.</p>
+                    </div>
+                    <div id="show_write">
+                        <span id="pencil"></span>
+                        <div id="show_write2">написать отзыв</div>
+                    </div>
+                    <div id="write_response">
+                        <form action="#" method="post">
+                            <div class="in9">
+                                <span>Никнэйм</span>
+                                <input type="text" size="65" class="passw2" name="nik">
+                            </div>
+                            <div class="in9">
+                                <span>Заголовок</span>
+                                <input type="text" size="65" class="passw2" name="title">
+                            </div>
+                            <div class="in9">
+                                <span class="red">Оценка товара</span>
+                                <div id="imgStar">
+                                    <div id="d1">&nbsp;</div>
+                                    <div id="d2">&nbsp;</div>
+                                    <div id="d3">&nbsp;</div>
+                                    <div id="d4">&nbsp;</div>
+                                    <div id="d5">&nbsp;</div>
+                                </div>
+                                <span id="show_hint"></span>
+                            </div>
+                            <div class="inn3">
+				<span class="dATitle">Достоинства</span>
+                                <textarea rows="4" maxlength="150" name="responsA" class="secRow2 textArea2"></textarea>
+                            </div>                            
+                            <div class="inn3">
+				<span class="dATitle">Недостатки</span>
+                                <textarea rows="4" maxlength="150" name="responsDb" class="secRow2 textArea2"></textarea>
+                            </div>                            
+                            <div class="inn3">
+				<span class="red dATitle">Комментарий</span>
+                                <textarea rows="4" maxlength="150" name="responsComm" class="secRow2 textArea2"></textarea>
+                            </div>
+                            <div class="in4">
+				<span>Ввидите цифры</span>
+				<input type="text" size="10" class="passw2" name="numberCheck">
+                            </div>
+                            <div class="in4">
+				<img src="/pic/checkNumbers.png" height="50" width="175">
+                                <a href="#"><span id="refresh"></span></a>
+                            </div>
+                            <input type="submit" id="send" value="Отправить">
+                        </form>
+                    </div>
+                    <div id="conteiner_opinion">
+                        <div id="line">&nbsp;</div>
+                        <div class="opinion">
+                            <div class="opinion_l">
+                                <div class="opinion_nik">Anabel</div>
+                                <p>22 июля, 12:40</p>
+                            </div>
+                            <div class="opinion_r">
+                                <p>
+                                    <img alt="4" src="/pic/star/4.png" width="90" height="20">
+                                </p>
+                                <p>
+                                    <b>Комментарий:&nbsp;</b>0
+                                </p>
+                            </div>                                
+                        </div>
+                        <div class="opinion">
+                            <div class="opinion_l">
+                                <div class="opinion_nik">Пётрович</div>
+                                <p>05 июня, 17:59</p>
+                            </div>
+                            <div class="opinion_r">
+                                <p>
+                                    <b>Хороший пад</b>
+                                    <img alt="4.5" src="/pic/star/5.png" width="90" height="20">
+                                </p>
+                                <p>
+                                    <b>Достоинства:&nbsp;</b>Удобный, хорошее качество, 100% совместимость со всеми играми. Много кнопок и аналоговые триггеры.
+                                </p>
+                                <p>
+                                    <b>Недостатки:&nbsp;</b>Чуть мелковат для моих рук. Плохая крестовина.
+                                </p>
+                            </div>                                
+                        </div>
+                        <div class="opinion">
+                            <div class="opinion_l">
+                                <div class="opinion_nik">Иван</div>
+                                <p>06 мая, 11:22</p>
+                            </div>
+                            <div class="opinion_r">
+                                <p>
+                                    <b>Для геймера-самое то!</b>
+                                    <img alt="2" src="/pic/star/2.png" width="90" height="20">
+                                </p>
+                                <p>
+                                    <b>Достоинства:&nbsp;</b>Удобный,практичный!
+                                </p>
+                                <p>
+                                    <b>Недостатки:&nbsp;</b>Иногда выскальзывает из рук,но кто столкнулся с такой проблемой-купите силиконовый чехол!
+                                </p>
+                                <p>
+                                    <b>Комментарий:&nbsp;</b>Полный комплект
+                                </p>
+                            </div>                                
+                        </div>
+                    </div>
+                </div>  
+             </div>
+           		<div id="footer">
+            		<div id="menuCont">
+	            		<ul id="menuGorFoot">
+    	        	    	<li><a href="#"><span>Главная</span></a></li>
+        		        	<li><a href="#"><span>О магазине</span></a></li>
+    	        		    <li><a href="#"><span>Условия доставки</span></a></li>
+   	    	 	    	    <li><a href="#"><span>Акции</span></a></li>
+    	            		<li><a href="#"><span>Связаться с нами</span></a></li>
+                    	</ul>
+               		</div>
+            		<div id="copyright">Copyright © 2013 Интернет магазин Pet-Like.ru - товары для животных</div>
+            	</div>
+            </div>
+        </div>
+</body>
+</html>

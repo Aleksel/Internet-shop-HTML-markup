@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pet-Like Интернет магазин</title>
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<script src="/js/jquery-1.10.2.min.js"></script>
+<script>
+    jQuery(function($){
+        $('#check1').change(function(){
+            $('#hint2').text("Укажите номера телефонов, по которым с Вами можно связаться для согласования заказа");
+            $('.out').show(500);
+        });
+        $('#check2').change(function(){
+            $('#hint2').text("Укажите номера телефонов, по которым с Вами можно связаться для подтверждения заказа");
+            $('.out').hide(500);
+        });
+    });
+</script>
+</head>
+<body>
+	<div id="main">
+		<div id="header">
+        	<div id="logo"><a href="/" title="На главную страницу"><span>Побалуйте вашего любимца</span></a></div>
+			<div id="entrance">
+            	<a id="enter" href="/">Вход для пользователей</a>
+                <a id="registration" href="/">Регистрация</a>
+            </div>
+          	<form action="#">
+           	<div id="search">
+            	<input type="text" size="30" id="shearchmain" name="shearch_main" onfocus="if('Поиск'===this.value) this.value='';" onblur="if(''===this.value) this.value='Поиск';" value="Поиск">
+            	<input type="submit" id="submit" value="">
+            </div>
+            </form>
+            <ul id="menuGor">
+            	<li><a href="#"><span>Главная</span></a></li>
+                <li><a href="#"><span>О магазине</span></a></li>
+                <li><a href="#"><span>Условия доставки</span></a></li>
+                <li><a href="#"><span>Акции</span></a></li>
+                <li><a href="#"><span>Связаться с нами</span></a></li>
+            </ul>
+            <div id="basket">
+            	<div id="iconBasket"></div>
+                <div id="textBasket">
+                	<div id="basketCount">Корзина: 0 товаров</div>
+                    <div id="goToBasket"><a href="/cart.html">Перейти в корзину</a></div>
+                </div>
+            </div>
+        </div>
+        <div id="contener3">
+      		<div id="news">
+              	<div id="menuVer">
+                   <ul id="menuVV">
+                       <li><a href="#"><span>Для собак</span></a></li>
+                       <li><a href="#"><span>Для кошек</span></a></li>
+                       <li><a href="#"><span>Для птиц</span></a></li>
+                       <li><a href="#"><span>Для грызунов</span></a></li>
+                       <li><a href="#"><span>Для рыб и рептилий</span></a></li>
+                       <li><a href="#"><span>Игрушки для животных</span></a></li>
+                   </ul>
+                </div>
+             	<a href="/"><div id="newsTitle"><span>Новости:</span></div></a>
+                <h3>06.05.2013</h3>
+               	<div id="news1">
+                    <p>Lego Duplo Набор для девочек (Лего Дупло 4623)
+                        Ambi Toys Погремушка Близнецы (Амби тойс AT31013)
+                        Taf Toys Игрушка "Развивающий кубик" (Таф Тойс 10355)
+                        Taf Toys Мобиль «Сафари» механический (Таф Тойс 11315)
+                        Taf Toys Мобиль «Весеннее настроение» (Таф Тойс 11215)</p>
+                    <a href="/"><span>читать далее</span></a>
+                    <h3>06.05.2013</h3>
+                    <p>Lego Duplo Набор для девочек (Лего Дупло 4623)
+                        Ambi Toys Погремушка Близнецы (Амби тойс AT31013)
+                        Taf Toys Игрушка "Развивающий кубик" (Таф Тойс 10355)
+                        Taf Toys Мобиль «Сафари» механический (Таф Тойс 11315)
+                        Taf Toys Мобиль «Весеннее настроение» (Таф Тойс 11215)</p>
+                        <a href="/"><span>читать далее</span></a>
+                    <h3>06.05.2013</h3>
+                    <p>Lego Duplo Набор для девочек (Лего Дупло 4623)
+                        Ambi Toys Погремушка Близнецы (Амби тойс AT31013)
+                        Taf Toys Игрушка "Развивающий кубик" (Таф Тойс 10355)
+                        Taf Toys Мобиль «Сафари» механический (Таф Тойс 11315)
+                        Taf Toys Мобиль «Весеннее настроение» (Таф Тойс 11215)</p>
+                    <a href="/"><span>читать далее</span></a>
+                    <br/><br/><br/><br/><br/>
+                </div>
+          	    <div id="newsBottom">
+                    <a href="/"><h1>Pet-Like.ru: интернет-магазин товаров для животных</h1></a>
+                    	<p>Добро пожаловать в наш интернет-магазин игрушек, подарков и сувениров! Мы предлагаем широкий ассортимент: детские игрушки для мальчиков, детские игрушки для девочек, подарки для мужчин, подарки для женщин, сувениры по хорошим ценам. В нашем интернет-магазине можно купить игрушки для мальчиков, купить игрушки для девочек, купить подарок, купить сувениры. Покупая в нашем Интернет-магазине игрушки, подарки или сувениры, вы можете быть уверены в качестве - ведь мы работаем только с официальными дилерами, крупнейших мировых производителей.</p>
+  				</div>  
+            </div>
+            <div id="content">
+				<ul id="titleBasket">
+					<li><a href="/cart.html">Корзина</a><span>→</span></li>
+					<li><a href="/auth.html">Авторизация</a><span>→</span></li>
+					<li class="order">Параметры заказа<span>→</span></li>
+					<li>Подтверждение заказа</li>
+				</ul>
+				<div id="content2">
+					<div id="in1">Параметры заказа</div>
+					<form action="/check2.html" method="post">
+						<div class="inn1">
+							<span class="dATitle">Получение товара</span>
+							<span id="radio" class="secRow">
+                                                            <label><input id="check1" type="radio" name="rec" value="recieve" checked="true" /> Доставка</label>
+								<label><input id="check2" type="radio" name="rec" value="self" /> Самовывоз</label>
+							</span>
+						</div>
+						<div class="inn1">
+							<span class="dATitle">Дата доставки</span>
+							<select name="deliveryDate"  id="date" class="secRow">
+								<option value="26.07.2013">26.07.2013</option>
+								<option value="27.07.2013">27.07.2013</option>
+								<option value="28.07.2013">28.07.2013</option>
+							</select>
+						</div>
+						<div class="hint">Установлена ближайшая возможная дата доставки.
+						</div>
+						<div class="inn1 out">
+							<span class="dATitle">Удобное время доставки</span>
+							<select name="deliveryTime" id="deliveryTime" class="secRow">
+								<option value="С 10 ДO 18">с 10 до 18 часов</option>
+								<option value="С 10 ДО 15">с 10 до 15 часов</option>
+								<option value="С 14 ДО 18">с 14 до 18 часов</option>
+								<option value="С 18 ДО 21">с 18 до 21 часа</option>
+							</select>
+						</div>
+						<div class="hint out">Точное время и дата доставки будут согласованы дополнительно, во время звонка оператора.</div>
+						<div class="inn1 out">
+							<span class="dATitle">Адрес доставки</span>
+							<div id="deliveryAdress">Введите адрес достваки или выберите один из <a href="/">ранее введеных адресов.</a></div>
+						</div>
+						<div class="inn2 out">
+							<span class="dATitle">Метро</span>
+							<select name="deliveryMetro" id="deliveryMetro" class="secRow">
+								<option value="-1">—</option>
+								<option value="Авиамоторная">Авиамоторная</option>
+								<option value="Автозаводская">Автозаводская</option>
+								<option value="Академическая">Академическая</option>
+								<option value="Александровский сад">Александровский сад</option>
+								<option value="Алексеевская">Алексеевская</option>
+								<option value="Алтуфьево">Алтуфьево</option>
+								<option value="Аннино">Аннино</option>
+								<option value="Арбатская">Арбатская</option>
+								<option value="Аэропорт">Аэропорт</option>
+								<option value="Бабушкинская">Бабушкинская</option>
+								<option value="Багратионовская">Багратионовская</option>
+								<option value="Баррикадная">Баррикадная</option>
+								<option value="Бауманская">Бауманская</option>
+								<option value="Беговая">Беговая</option>
+								<option value="Белорусская">Белорусская</option>
+								<option value="Беляево">Беляево</option>
+								<option value="Бибирево">Бибирево</option>
+								<option value="Библиотека им. ленина">Библиотека им. ленина</option>
+								<option value="Борисово">Борисово</option>
+								<option value="Боровицкая">Боровицкая</option>
+								<option value="Ботанический сад">Ботанический сад</option>
+								<option value="Братиславская">Братиславская</option>
+								<option value="Бульвар адмирала ушакова">Бульвар адмирала ушакова</option>
+								<option value="Бульвар дмитрия донского">Бульвар дмитрия донского</option>
+								<option value="Бунинская аллея">Бунинская аллея</option>
+								<option value="Варшавская">Варшавская</option>
+								<option value="Вднх">Вднх</option>
+								<option value="Владыкино">Владыкино</option>
+								<option value="Водный стадион">Водный стадион</option>
+								<option value="Войковская">Войковская</option>
+								<option value="Волгоградский проспект">Волгоградский проспект</option>
+								<option value="Волжская">Волжская</option>
+								<option value="Волоколамская">Волоколамская</option>
+								<option value="Воробьевы горы">Воробьевы горы</option>
+								<option value="Выставочная">Выставочная</option>
+								<option value="Выхино">Выхино</option>
+								<option value="Динамо">Динамо</option>
+								<option value="Дмитровская">Дмитровская</option>
+								<option value="Добрынинская">Добрынинская</option>
+								<option value="Домодедовская">Домодедовская</option>
+								<option value="Достоевская">Достоевская</option>
+								<option value="Дубровка">Дубровка</option>
+								<option value="Зябликово">Зябликово</option>
+								<option value="Измайловская">Измайловская</option>
+								<option value="Калужская">Калужская</option>
+								<option value="Кантемировская">Кантемировская</option>
+								<option value="Каховская">Каховская</option>
+								<option value="Каширская">Каширская</option>
+								<option value="Киевская">Киевская</option>
+								<option value="Китай-город">Китай-город</option>
+								<option value="Кожуховская">Кожуховская</option>
+								<option value="Коломенская">Коломенская</option>
+								<option value="Комсомольская">Комсомольская</option>
+								<option value="Коньково">Коньково</option>
+								<option value="Красногвардейская">Красногвардейская</option>
+								<option value="Краснопресненская">Краснопресненская</option>
+								<option value="Красносельская">Красносельская</option>
+								<option value="Красные ворота">Красные ворота</option>
+								<option value="Крестьянская застава">Крестьянская застава</option>
+								<option value="Кропоткинская">Кропоткинская</option>
+								<option value="Крылатское">Крылатское</option>
+								<option value="Кузнецкий мост">Кузнецкий мост</option>
+								<option value="Кузьминки">Кузьминки</option>
+								<option value="Кунцевская">Кунцевская</option>
+								<option value="Курская">Курская</option>
+								<option value="Кутузовская">Кутузовская</option>
+								<option value="Ленинский проспект">Ленинский проспект</option>
+								<option value="Лубянка">Лубянка</option>
+								<option value="Люблино">Люблино</option>
+								<option value="Марксистская">Марксистская</option>
+								<option value="Марьина роща">Марьина роща</option>
+								<option value="Марьино">Марьино</option>
+								<option value="Маяковская">Маяковская</option>
+								<option value="Медведково">Медведково</option>
+								<option value="Международная">Международная</option>
+								<option value="Менделеевская">Менделеевская</option>
+								<option value="Митинская">Митинская</option>
+								<option value="Молодежная">Молодежная</option>
+								<option value="Мякинино">Мякинино</option>
+								<option value="Нагатинская">Нагатинская</option>
+								<option value="Нагорная">Нагорная</option>
+								<option value="Нахимовский проспект">Нахимовский проспект</option>
+								<option value="Новогиреево">Новогиреево</option>
+								<option value="Новокосино">Новокосино</option>
+								<option value="Новокузнецкая">Новокузнецкая</option>
+								<option value="Новослободская">Новослободская</option>
+								<option value="Новоясеневская">Новоясеневская</option>
+								<option value="Новые черемушки">Новые черемушки</option>
+								<option value="Октябрьская">Октябрьская</option>
+								<option value="Октябрьское поле">Октябрьское поле</option>
+								<option value="Олимпийская деревня">Олимпийская деревня</option>
+								<option value="Орехово">Орехово</option>
+								<option value="Отрадное">Отрадное</option>
+								<option value="Охотный ряд">Охотный ряд</option>
+								<option value="Павелецкая">Павелецкая</option>
+								<option value="Парк культуры">Парк культуры</option>
+								<option value="Парк победы">Парк победы</option>
+								<option value="Партизанская">Партизанская</option>
+								<option value="Первомайская">Первомайская</option>
+								<option value="Перово">Перово</option>
+								<option value="Петровско-разумовская">Петровско-разумовская</option>
+								<option value="Печатники">Печатники</option>
+								<option value="Пионерская">Пионерская</option>
+								<option value="Планерная">Планерная</option>
+								<option value="Площадь ильича">Площадь ильича</option>
+								<option value="Площадь революции">Площадь революции</option>
+								<option value="Полежаевская">Полежаевская</option>
+								<option value="Полянка">Полянка</option>
+								<option value="Пражская">Пражская</option>
+								<option value="Преображенская площадь">Преображенская площадь</option>
+								<option value="Пролетарская">Пролетарская</option>
+								<option value="Проспект вернадского">Проспект вернадского</option>
+								<option value="Проспект мира">Проспект мира</option>
+								<option value="Профсоюзная">Профсоюзная</option>
+								<option value="Пушкинская">Пушкинская</option>
+								<option value="Речной вокзал">Речной вокзал</option>
+								<option value="Рижская">Рижская</option>
+								<option value="Римская">Римская</option>
+								<option value="Рязанский проспект">Рязанский проспект</option>
+								<option value="Савеловская">Савеловская</option>
+								<option value="Свиблово">Свиблово</option>
+								<option value="Севастопольская">Севастопольская</option>
+								<option value="Семеновская">Семеновская</option>
+								<option value="Серпуховская">Серпуховская</option>
+								<option value="Славянский бульвар">Славянский бульвар</option>
+								<option value="Смоленская">Смоленская</option>
+								<option value="Сокол">Сокол</option>
+								<option value="Сокольники">Сокольники</option>
+								<option value="Спортивная">Спортивная</option>
+								<option value="Сретенский бульвар">Сретенский бульвар</option>
+								<option value="Строгино">Строгино</option>
+								<option value="Студенческая">Студенческая</option>
+								<option value="Суворовская площадь">Суворовская площадь</option>
+								<option value="Сухаревская">Сухаревская</option>
+								<option value="Сходненская">Сходненская</option>
+								<option value="Таганская">Таганская</option>
+								<option value="Тверская">Тверская</option>
+								<option value="Театральная">Театральная</option>
+								<option value="Текстильщики">Текстильщики</option>
+								<option value="Телецентр">Телецентр</option>
+								<option value="Теплый стан">Теплый стан</option>
+								<option value="Терешково">Терешково</option>
+								<option value="Тимирязевская">Тимирязевская</option>
+								<option value="Третьяковская">Третьяковская</option>
+								<option value="Трубная">Трубная</option>
+								<option value="Тульская">Тульская</option>
+								<option value="Тургеневская">Тургеневская</option>
+								<option value="Тушинская">Тушинская</option>
+								<option value="Ул. старокачаловская">Ул. старокачаловская</option>
+								<option value="Ул.горчакова">Ул.горчакова</option>
+								<option value="Улица 1905 года">Улица 1905 года</option>
+								<option value="Улица академика королева">Улица академика королева</option>
+								<option value="Улица академика янгеля">Улица академика янгеля</option>
+								<option value="Улица подбельского">Улица подбельского</option>
+								<option value="Улица скобелевская">Улица скобелевская</option>
+								<option value="Университет">Университет</option>
+								<option value="Филевский парк">Филевский парк</option>
+								<option value="Фили">Фили</option>
+								<option value="Фрунзенская">Фрунзенская</option>
+								<option value="Царицыно">Царицыно</option>
+								<option value="Цветной бульвар">Цветной бульвар</option>
+								<option value="Черкизовская">Черкизовская</option>
+								<option value="Чертановская">Чертановская</option>
+								<option value="Чеховская">Чеховская</option>
+								<option value="Чистые пруды">Чистые пруды</option>
+								<option value="Чкаловская">Чкаловская</option>
+								<option value="Шаболовская">Шаболовская</option>
+								<option value="Шипиловская">Шипиловская</option>
+								<option value="Шоссе энтузиастов">Шоссе энтузиастов</option>
+								<option value="Щелковская">Щелковская</option>
+								<option value="Щукинская">Щукинская</option>
+								<option value="Электрозаводская">Электрозаводская</option>
+								<option value="Юго-западная">Юго-западная</option>
+								<option value="Южная">Южная</option>
+								<option value="Ясенево">Ясенево</option>
+							</select>
+						</div>
+						<div class="inn2 out">
+							<span class="dATitle nessesitive">Улица</span>
+							<input type="text" id="deliveryStreet" name="deliveryStreet" class="secRow textArea">
+						</div>						
+						<div class="inn2 out">
+							<span class="dATitle nessesitive">Дом</span>
+							<input type="text" size="15" name="deliveryHous" class="secRow">
+						</div>
+						<div class="inn2 out">
+							<span class="dATitle">Корпус</span>
+							<input type="text" size="15" name="deliveryKorp" class="secRow">
+						</div>
+						<div class="inn2 out">
+							<span class="dATitle">Строение</span>
+							<input type="text" size="15" name="deliveryStr" class="secRow">
+						</div>
+						<div class="inn2 out">
+							<span class="dATitle">Подъезд</span>
+							<input type="text" size="15" name="deliveryPod" class="secRow">
+						</div>						
+						<div class="inn2 out">
+							<span class="dATitle">Этаж</span>
+							<input type="text" size="15" name="deliveryFloor" class="secRow">
+						</div>						
+						<div class="inn2 out">
+							<span class="dATitle">Квартира</span>
+							<input type="text" size="15" name="deliveryFlat" class="secRow">
+						</div>						
+						<div class="inn2">
+							<span class="dATitle">Комментарий</span>
+							<textarea rows="4" maxlength="150" name="deliveryComm" class="secRow textArea"></textarea>
+						</div>
+						<div class="inn2">
+							<span class="dATitle nessesitive">ФИО получателя</span>
+							<input type="text" name="deliveryFio" class="secRow textArea">
+						</div>
+						<div id="hint2">Укажите номера телефонов, по которым с Вами можно связаться для согласования заказа</div>
+						<div class="inn2">
+							<span class="dATitle nessesitive">Мобильный телефон</span>
+							<input type="text" name="deliveryHandy" class="secRow textArea">
+						</div>
+						<div class="hint2">Формат: +7 (ХХХ) ХХХ-ХХ-ХХ</div>
+						<div class="inn2 out">
+							<span class="dATitle">Дополнительный телефон</span>
+							<input type="text" name="deliveryPhone" class="secRow textArea">
+						</div>
+						<div class="hint2 out">(с кодом города)</div>
+						<input type="submit" id="send" value="Продолжить">
+					</form>
+				</div>
+            </div>
+           		<div id="footer">
+            		<div id="menuCont">
+	            		<ul id="menuGorFoot">
+    	        	    	<li><a href="#"><span>Главная</span></a></li>
+        		        	<li><a href="#"><span>О магазине</span></a></li>
+    	        		    <li><a href="#"><span>Условия доставки</span></a></li>
+   	    	 	    	    <li><a href="#"><span>Акции</span></a></li>
+    	            		<li><a href="#"><span>Связаться с нами</span></a></li>
+                    	</ul>
+               		</div>
+            		<div id="copyright">Copyright © 2013 Интернет магазин Pet-Like.ru - товары для животных</div>
+            	</div>
+            </div>
+        </div>
+</body>
+</html>
